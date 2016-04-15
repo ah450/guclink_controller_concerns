@@ -6,9 +6,9 @@ module Rescuer
     rescue_from AuthenticationError, with: :authentication_error
     rescue_from ActionController::ParameterMissing, with: :bad_request_response
     rescue_from ForbiddenError, with: :forbidden_error
-    rescue_from JWT::DecodeError, with: :verification_error
-    rescue_from JWT::ExpiredSignature, with: :expired_signature
-    rescue_from JWT::VerificationError, with: :verification_error
+    rescue_from ::JWT::DecodeError, with: :verification_error
+    rescue_from ::JWT::ExpiredSignature, with: :expired_signature
+    rescue_from ::JWT::VerificationError, with: :verification_error
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
   end
 
