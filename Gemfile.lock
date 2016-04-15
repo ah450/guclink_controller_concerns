@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    guclink_controller_concerns (0.0.2)
+    guclink_controller_concerns (0.0.4)
       jwt
       rails (~> 4.2.6)
       rake
